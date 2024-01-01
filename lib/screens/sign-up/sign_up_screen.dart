@@ -1,8 +1,8 @@
-import 'package:chat_app/screens/login/components/body.dart';
+import 'package:chat_app/screens/sign-up/components/body.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

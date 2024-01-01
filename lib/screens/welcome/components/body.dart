@@ -1,6 +1,7 @@
 import 'package:chat_app/components/rounded_button.dart';
 import 'package:chat_app/constants.dart';
 import 'package:chat_app/screens/login/login_screen.dart';
+import 'package:chat_app/screens/sign-up/sign_up_screen.dart';
 import 'package:chat_app/screens/welcome/components/background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -35,7 +36,11 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "Sign Up",
-              press: () {},
+              press: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const SignUpScreen();
+                }));
+              },
               color: kPrimaryLightColor,
               textColor: Colors.black,
             )

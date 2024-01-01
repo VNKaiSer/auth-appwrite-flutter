@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AlredyHaveAccountCheck extends StatelessWidget {
   final bool login;
-  final VoidCallback press;
+  final Function press;
   const AlredyHaveAccountCheck({
     super.key,
     required this.login,
@@ -17,13 +17,14 @@ class AlredyHaveAccountCheck extends StatelessWidget {
       children: <Widget>[
         Text(
           login ? "Don't have an Account?" : "Already have an Account ? ",
-          style: TextStyle(color: kPrimaryColor),
+          style: const TextStyle(color: kPrimaryColor),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: press as void Function()?,
           child: Text(
-            login ? "Sign Up" : "Sign In",
-            style: TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold),
+            login ? " Sign Up" : " Sign In",
+            style: const TextStyle(
+                color: kPrimaryColor, fontWeight: FontWeight.bold),
           ),
         )
       ],

@@ -3,6 +3,7 @@ import 'package:chat_app/components/rounded_button.dart';
 import 'package:chat_app/components/rounded_input_field.dart';
 import 'package:chat_app/components/rounded_password_field.dart';
 import 'package:chat_app/screens/login/components/background.dart';
+import 'package:chat_app/screens/sign-up/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -33,7 +34,11 @@ class Body extends StatelessWidget {
           SizedBox(height: size.height * 0.03),
           AlredyHaveAccountCheck(
             login: true,
-            press: () {},
+            press: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const SignUpScreen();
+              }));
+            },
           )
         ],
       ),
